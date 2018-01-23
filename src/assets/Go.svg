@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="293px" height="100px" viewBox="0 0 293 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Go Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="127.586048%" y1="74.4482946%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#F0B5C3" offset="0%"></stop>
+            <stop stop-color="#7370EA" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="245" height="50" rx="25"></rect>
+        <filter x="-17.3%" y="-65.0%" width="134.7%" height="270.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.62650796   0 0 0 0 0.626789387   0 0 0 0 0.863228104  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Home-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-314.000000, -599.000000)">
+        <g id="Go-Copy-2" transform="translate(338.000000, 614.000000)">
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+            <text id="SEE-MORE" font-family="Gotham-Black, Gotham" font-size="18" font-weight="700" letter-spacing="2.25" fill="#FFFFFF">
+                <tspan x="65.368" y="33">SEE MORE</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

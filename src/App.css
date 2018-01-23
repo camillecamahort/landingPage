@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  
+  height: 100px;
+}
+
+.goCamille {
+    height: 350px;
+    
+}
+
+.goMiria {
+    height: 350px;
+}
+
+
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(./assets/gotham/Gotham-Light.otf);
+}
