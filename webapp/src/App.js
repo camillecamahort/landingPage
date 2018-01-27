@@ -6,7 +6,7 @@ import Home from './comp/Home.js';
 import AboutC from './comp/aboutC.js';
 import AboutM from './comp/aboutM.js';
 import Chat from './comp/chat.js';
-import mySocket from 'socket.io-client';
+//import mySocket from 'socket.io-client';
 
 class App extends Component {
     constructor(props){
