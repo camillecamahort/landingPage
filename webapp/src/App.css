@@ -16,8 +16,109 @@
     height: 350px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #fce4f5 0%, #d3dded 51%, #fce7f6 100%);
+}
+
+.btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 14px 26px -12px rgba(84, 29, 118, 0.32), 0 4px 23px 0px rgba(84, 29, 118, 0.12), 0 8px 10px -5px rgba(56, 29, 118, 0.2);
+  border-radius: 10px;
+  border:none;
+ }
 
 
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-2 {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+
+.btn-3 {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.chatbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 60vw;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: white;
+  box-shadow: 0 14px 26px -12px rgba(84, 29, 118, 0.32), 0 4px 23px 0px rgba(84, 29, 118, 0.12), 0 8px 10px -5px rgba(56, 29, 118, 0.2);
+}
+
+/*.cards {
+    width: 80%;
+    height: 70vh;
+    padding-top: 10%;
+    background-color: white;
+    box-shadow: 0 14px 26px -12px rgba(84, 29, 118, 0.32), 0 4px 23px 0px rgba(84, 29, 118, 0.12), 0 8px 10px -5px rgba(56, 29, 118, 0.2);
+}*/
+
+.chatbox h2{
+    color: #6179a0;
+}
+
+.input {
+	position:relative;
+	font-size: 1.0em;
+	background: white;
+	padding: 3px;
+	display: inline-block;
+	border-radius: 15px;
+    border-bottom: 2px solid #6179a0; 
+	}
+
+/*.input-1{
+    width: 50%;
+    height: 30px;
+}*/
+
+.peopleonline {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+    left: 0;
+    flex-wrap: wrap;
+    width: 15vw;
+    margin: 0 auto;
+    min-height: 50vh;
+    background-color: white;
+    
+}
+
+.close {
+    position: relative;
+    right: 5px;
+    font-size: 1.5em;
+    color: #6179a0;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

@@ -72,8 +72,8 @@ class App extends Component {
         if(this.state.mode === 0){
             comp = (
                 <div>
-                    <input type = "text" placeholder="Type in your username" onChange={this.handleName} />
-                    <button onClick={this.joinChat}>Join Chat</button>
+                    <input className="input input-1" type = "text" placeholder="Type in your username" onChange={this.handleName} />
+                    <button className="btn btn-3" onClick={this.joinChat}>Join Chat</button>
                 </div>
             )  
         } else if(this.state.mode === 1){
@@ -87,12 +87,14 @@ class App extends Component {
             })
             
             comp = (
-                <div id="chatBox">
+                <div className="container">
+                <div className="chatbox" id="chatBox">
                     <div id="chatDisplay">{allmsgs}</div>
                     <div id="controls">
-                        <input type="text" placeholder="type your msg here" onChange={this.handleMyMsg} />
-                        <button onClick={this.sendMsg}>Send</button>
+                        <input className="input input-1" type="text" placeholder="type your msg here" onChange={this.handleMyMsg} />
+                        <button className="btn btn-3" onClick={this.sendMsg}>Send</button>
                     </div>
+                </div>
                 </div>
             );
         }
@@ -107,13 +109,20 @@ class App extends Component {
         })
         
         return (
-          <div className="App">
+        <div className="container">
+          <div className="chatbox">
+            <div className="close">X</div>
+            <div className="chat">
+            <h2>WELCOME TO OUR CHAT</h2>
             {comp}
-            <div>
-                People who are online <hr/>
+            </div>
+            <div className="peopleonline">
+                <h2>People who are online</h2>
+            <hr/>
                 {allnames}
             </div>
-          </div>
+            </div>
+        </div>
         );
     }
 }

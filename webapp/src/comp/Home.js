@@ -34,13 +34,16 @@ class Home extends Component {
     
   render() {
     return (
+    <div className="container">
       <div className="App">
         <img src={logo} className="App-logo" alt="logo" />
         <br /><br /><br />      
         <img src={goCamille} className="goCamille" alt="go" onClick={this.changeCamille}/>
         <img src={goMiria} className="goMiria" alt="go" onClick={this.changeMiria}/>
-        <button id="chat" onClick={this.chatting}>Start Chatting!</button>
-        
+        <div className="nav">
+        <button id="chat" className="btn btn-2" onClick={this.chatting}>Start Chatting!</button>
+        </div>
+        </div>
       </div>
     );
   }
