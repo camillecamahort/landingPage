@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import mySocket from 'socket.io-client';
+import closeicon from '../assets/go-back.svg';
 
 class App extends Component {
     //building a chat application
@@ -20,6 +21,7 @@ class App extends Component {
         this.handleName = this.handleName.bind(this);
         this.handleMyMsg = this.handleMyMsg.bind(this);
         this.sendMsg = this.sendMsg.bind(this);
+        this.goHome = this.goHome.bind(this);
     }
   
     componentDidMount(){
@@ -33,7 +35,7 @@ class App extends Component {
         this.setState({
             mode:1
         })
-        this.socket = mySocket("http://localhost:10001");
+        this.socket = mySocket("https://chatsocketscamiria.herokuapp.com");
         this.socket.emit("uname", this.state.myname);
         this.socket.on("names", (data)=>{
             this.setState({
@@ -62,8 +64,11 @@ class App extends Component {
     
     sendMsg(){
         var msg = this.state.myname+": "+this.state.mymsg;
-        
         this.socket.emit("sendmsg", msg);
+    }
+    
+    goHome=()=>{
+        this.props.changePage(0);
     }
     
     render() {
@@ -71,7 +76,7 @@ class App extends Component {
         
         if(this.state.mode === 0){
             comp = (
-                <div>
+                <div className="joinchat">
                     <input className="input input-1" type = "text" placeholder="Type in your username" onChange={this.handleName} />
                     <button className="btn btn-3" onClick={this.joinChat}>Join Chat</button>
                 </div>
@@ -87,14 +92,19 @@ class App extends Component {
             })
             
             comp = (
-                <div className="container">
+                
+                <div className="peopleonline">
+                <h2>People who are online</h2>
+                <hr/>
+                    {allnames}
+                </div>
+                
                 <div className="chatbox" id="chatBox">
                     <div id="chatDisplay">{allmsgs}</div>
-                    <div id="controls">
+                    <div id="sendmessageblock">
                         <input className="input input-1" type="text" placeholder="type your msg here" onChange={this.handleMyMsg} />
                         <button className="btn btn-3" onClick={this.sendMsg}>Send</button>
                     </div>
-                </div>
                 </div>
             );
         }
@@ -102,7 +112,7 @@ class App extends Component {
         
         var allnames = this.state.allnames.map((obj, i)=>{
             return (
-                <div key={i}>
+                <div className="namesonline" key={i}>
                     {obj}
                 </div>
             )
@@ -110,18 +120,18 @@ class App extends Component {
         
         return (
         <div className="container">
-          <div className="chatbox">
-            <div className="close">X</div>
+            
+            <img src={closeicon} className="close" alt="go back" onClick={this.goHome}/>
+            
+            <div className="homeheader">
+            <p className="heading1">CHAT</p>
+            <p className="heading2">Insert your name to start</p>
+            </div>
+            
             <div className="chat">
-            <h2>WELCOME TO OUR CHAT</h2>
             {comp}
             </div>
-            <div className="peopleonline">
-                <h2>People who are online</h2>
-            <hr/>
-                {allnames}
-            </div>
-            </div>
+            
         </div>
         );
     }

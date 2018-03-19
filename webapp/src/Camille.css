@@ -1,5 +1,22 @@
+@font-face {
+    font-family: GothamBlack;
+    src: url(./assets/gotham/Gotham-Black.otf);
+}
+
+@font-face {
+    font-family: GothamLight;
+    src: url(./assets/gotham/Gotham-Light.otf);
+}
+
+@font-face {
+    font-family: GothamBold;
+    src: url(./assets/gotham/Gotham-Bold.otf);
+}
+
+
 .App{
-    text-align: center;
+    /*text-align: center;*/
+    margin-top: -5%;
 }
 
 .socialMedia {
@@ -14,9 +31,7 @@
 .camProfile {
     height: 100%;
     width: 100%;
-   
-    
-   
+    margin-top: -15%;
 }
 
 .arrow {
@@ -33,7 +48,14 @@
     margin-top: 22%;
 }
 
-@font-face {
-    font-family: Gotham;
-    src: url(./assets/gotham/Gotham-Light.otf);
+h2{
+    font-family: GothamBold;
+}
+
+.header{
+    font-family: GothamBold;
+}
+
+.content{
+    font-family: GothamLight;
 }
